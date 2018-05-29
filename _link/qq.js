@@ -25,11 +25,13 @@ const FIELD_CODE2 = '商品コード';
         //検索キーワード
         var search_word = document.createElement('input');
         search_word.type = 'text';
+        search_word.id = 'wd';
 
         //検索ボタン
         var search_button = document.createElement('input');
         search_button.type = 'submit';
         search_button.value = 'search';
+        search_button.id = 'bt';
         search_button.onclick = function () {
             keyword_search();
         };
@@ -57,7 +59,7 @@ const FIELD_CODE2 = '商品コード';
             node_space.removeChild(node_space.childNodes[i]);
         }
         var label = document.createElement('label');
-        label.appendChild(document.createTextNode('レコード内検索'));
+        label.appendChild(document.createTextNode('　'));
         label.appendChild(document.createTextNode('  '));  
         label.appendChild(search_word);
         label.appendChild(document.createTextNode('  '));    
